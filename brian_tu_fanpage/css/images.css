@@ -1,0 +1,430 @@
+/* ==========================================================================
+   DEFAULTS
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   STYLES
+   ========================================================================== */
+
+body{
+  font-family: "Zilla Slab", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #181818;
+  text-align: center;
+  color: #DADDD8;
+}
+
+h1, h2{
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2{
+  color: #D4AF37;
+  font-weight: normal;
+}
+
+h4{
+  font-family: "Zilla Slab", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  font-size: 1.3em;
+  padding: 10px;
+  margin: 0 -8px 10px -8px;
+  background-image: linear-gradient(to top, #003b73, #153162, #1b2852, #1c1f43, #1a1734);
+}
+
+header a {
+  color: #D4AF37;
+}
+
+header h3 {
+  font-weight: normal;
+}
+
+nav {
+  z-index: 100;
+
+  display:flex;
+
+  justify-content: center;
+
+  align-items: start;
+
+  background-color: #181818;
+  color:#DADDD8;
+
+  font-size:1.7em;
+
+  margin: -10px;
+
+  position: sticky;
+  top: -5px;
+}
+
+nav div {
+  margin: 15px;
+}
+
+nav div a {
+  margin: 20px;
+  text-decoration: none;
+  color: #DADDD8;
+  transition: color 0.15s;
+}
+
+nav div a:hover {
+  color: #D4AF37;
+}
+
+.grey-background{
+  background-image: url("../img/Grey Background.png");
+  margin: -30px -8px 0 -8px;
+}
+
+.s1 {
+  padding: 150px 150px;
+  font-size: 2em;
+}
+
+.s2{
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+
+.s2 div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 50px 0;
+}
+
+.s2 img {
+  width: 100%;
+}
+
+footer {
+  color: #CCCCCC;
+  background-color: #181818;
+  margin-left: -8px;
+  margin-right: 0px;
+  margin-bottom: -100px;
+  font-size: 1.2em;
+  text-align: left;
+  padding: 5px 50px;
+}
+
+footer .box{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 15em;
+}
+
+footer h3 {
+  font-weight: normal;
+  color: white;
+  font-size: 1.7em;
+}
+
+footer .box h3{
+  margin-top: 0px;
+  margin-bottom: -10px;
+  font-size: 1.3em;
+}
+
+footer .box h4{
+  color: #D4AF37;
+  font-weight: 300;
+  margin-bottom: -15px;
+}
+
+footer .box a {
+  text-decoration: none;
+  font-weight: lighter;
+  color: #D4AF37;
+}
+
+@keyframes fade-in {
+  0%, 10% {
+    transform: translateY(100px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes corner-fade-in {
+  0%, 10% {
+    transform: translateY(150px) translateX(50px);
+    opacity: 0%;
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes pop-up {
+  0% {
+    scale: 0;
+  }
+
+
+  15% {
+    scale: 120%;
+  }
+
+  16%, 26% {
+    scale: 100%;
+  }
+
+  18%, 23% {
+    scale: 90%;
+  }
+
+  20% {
+    scale: 85%;
+  }
+
+  29% {
+    scale: 105%;
+  }
+
+  32% {
+    scale: 103%;
+  }
+
+  35% {
+    scale: 101%;
+  }
+
+  38% {
+    scale: 100.5%;
+  }
+
+  100% {
+    scale: 100%;
+  }
+
+}
+
+@keyframes wipe-enter{
+  0% {
+    opacity: 0;
+    transform: scale(0, .025);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2, .025);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .burner {
+    animation: reveal 2.6s 1 10s forwards;
+  }
+
+  .fade {
+    opacity: 100%;
+    animation: fade-in ease 1s 1 forwards;
+  }
+
+  .corner-fade {
+    animation: corner-fade-in ease 1s 1 forwards;
+  }
+
+  .pop {
+    animation: pop-up ease 1.3s 1 0.05s forwards;
+  }
+
+  .wipe {
+    animation: wipe-enter ease 0.5s 1 0s forwards;
+  }
+
+  .s3 .container-3 a:hover {
+    transform: scale(120%);
+  }
+
+  .s3 .container-3 .center-button a:hover {
+    color: #D4AF37;
+  }
+
+
+
+}
+
+/* ==========================================================================
+   HELPERS
+   ========================================================================== */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   MEDIA
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+}
+
+/* ==========================================================================
+   PRINT
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
